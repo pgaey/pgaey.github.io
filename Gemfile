@@ -13,5 +13,5 @@ end
 gem "tzinfo"
 gem "csv"
 gem "base64"
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 5.3.3'
 
