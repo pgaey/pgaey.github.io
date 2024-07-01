@@ -1,4 +1,4 @@
 ---
-layout: homea
+layout: home
 # Index page
 ---
