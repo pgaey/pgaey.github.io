@@ -1,0 +1,143 @@
+---
+import '../styles/global.css'
+
+const name = '이예찬'
+const role = '프론트엔드 개발자'
+const intro = 'React 기반 웹 개발 3년차. 사용자 경험을 중심으로 탄탄한 컴포넌트 설계와 성능 최적화를 추구합니다.'
+const github = 'pgaey'
+const email = 'pgaey@naver.com'
+
+const skillGroups = [
+  {
+    label: 'Frontend',
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'TanStack Query', 'Zustand', 'Vite']
+  },
+  {
+    label: 'Testing',
+    items: ['Jest', 'Vitest', 'React Testing Library']
+  },
+  {
+    label: 'Infra / DevOps',
+    items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'AWS']
+  },
+  {
+    label: 'Backend',
+    items: ['Node.js', 'Express', 'GraphQL', 'REST API']
+  }
+]
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{name} · {role}</title>
+    <meta name="description" content={intro} />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+
+    <!-- 상단 고정 네비게이션 -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+      <nav class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+        <span class="font-semibold text-gray-900">{name}</span>
+        <div class="flex gap-6 text-sm text-gray-500">
+          <a href="#about" class="hover:text-gray-900 transition-colors">About</a>
+          <a href="#skills" class="hover:text-gray-900 transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-gray-900 transition-colors">Projects</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6">
+
+      <!-- Hero -->
+      <section class="pt-24 pb-20">
+        <p class="text-sm font-medium text-indigo-600 mb-4">안녕하세요 👋</p>
+        <h1 class="text-5xl font-bold text-gray-900 mb-3 tracking-tight">{name}</h1>
+        <h2 class="text-xl text-gray-500 mb-6">{role}</h2>
+        <p class="text-gray-600 leading-relaxed max-w-xl mb-10 text-base">{intro}</p>
+        <div class="flex gap-3 flex-wrap">
+          <a
+            href={`https://github.com/${github}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+          <a
+            href={`mailto:${email}`}
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-50 transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            이메일
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-16 border-t border-gray-100">
+        <h2 class="text-2xl font-bold mb-6">About</h2>
+        <div class="space-y-4 text-gray-600 leading-relaxed">
+          <p>
+            React 기반 프론트엔드 개발 3년차로, 사용자 중심의 UI 구현과 유지보수 가능한 컴포넌트 아키텍처 설계를 중요하게 생각합니다.
+          </p>
+          <p>
+            TanStack Query를 활용한 서버 상태 관리, Zustand를 통한 클라이언트 상태 최적화 경험이 있으며,
+            Docker / Kubernetes 기반 배포 환경에서의 프론트엔드 운영 경험을 보유하고 있습니다.
+          </p>
+          <p>
+            TypeScript를 기본으로 사용하며, 테스트 코드 작성과 CI/CD 파이프라인 구성에도 익숙합니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="py-16 border-t border-gray-100">
+        <h2 class="text-2xl font-bold mb-8">Skills</h2>
+        <div class="grid gap-8">
+          {skillGroups.map(group => (
+            <div>
+              <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">
+                {group.label}
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                {group.items.map(item => (
+                  <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-indigo-50 hover:text-indigo-700 transition-colors">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="py-16 border-t border-gray-100">
+        <h2 class="text-2xl font-bold mb-8">Projects</h2>
+        <div class="rounded-xl border border-dashed border-gray-200 p-10 text-center">
+          <p class="text-gray-400 text-sm">프로젝트를 준비 중입니다.</p>
+          <p class="text-gray-300 text-xs mt-1">곧 업데이트할게요 ✍️</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 mt-8">
+      <div class="max-w-3xl mx-auto px-6 py-8 flex justify-between items-center text-sm text-gray-400">
+        <span>© 2025 {name}</span>
+        <span>Built with Astro</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
